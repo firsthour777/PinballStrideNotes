@@ -3,7 +3,7 @@
 
 // put the DT line of code within your script, then when accessing it will get the Delta Time
 
-namespace PinballStride.Scripts.Services;
+namespace FirstHourLibrary.Scripts.Services;
 
 public class DeltaTimeService : IDeltaTimeService
 {

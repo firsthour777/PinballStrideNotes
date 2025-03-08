@@ -7,7 +7,7 @@ using Stride.Core.Mathematics;
 using Stride.Input;
 using Stride.Engine;
 
-namespace PinballStride.Scripts.Skeletons;
+namespace FirstHourLibrary.Scripts.Skeletons;
 
 public class AsyncScriptSkeleton : AsyncScript
 {

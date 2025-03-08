@@ -1,0 +1,12 @@
+
+
+
+root = true
+
+[*.cs]
+dotnet_diagnostic.IDE0047.severity = none
+
+
+
+
+

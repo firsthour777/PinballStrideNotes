@@ -1,4 +1,4 @@
-namespace PinballStride.Scripts.Services;
+namespace FirstHourLibrary.Scripts.Services;
 
 public interface IDeltaTimeService
 {

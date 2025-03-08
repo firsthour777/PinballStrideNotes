@@ -1,13 +1,13 @@
-namespace PinballStride.Scripts.Services;
+namespace FirstHourLibrary.Scripts.Services;
 
 public class BooleanService : IBooleanService
 {
-   public async Task<int> ConvertInversionBoolToInt(bool isInverted)
+   public int ConvertInversionBoolToInt(bool isInverted)
    {
       int inverterValue = 1;
       if (isInverted)
       {
-         returnValue = -1;
+         inverterValue = -1;
       }
       return inverterValue;
    }

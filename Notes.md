@@ -338,7 +338,7 @@ Way 1 is prefered so that you are not in the Update area.
 
 # CODE
 
-Use Async
+
 Start() is the init function
 Update() is the function that happens every frame
 
@@ -829,7 +829,15 @@ Async Script - Contains Execute, allowing await
 
 
 
-# ASYNC
+# ASYNC AWAIT
+
+Use Async when you need to await something, or in the following situations:
+DB Queries
+Web Requests
+File I/O
+Delays
+Anything that would freeze another part.
+Need to do multiple tasks in parallel.
 
 Works very similar to regular async, but you need a while loop to check if game is running
 and then do a next frame on a script, or await something that is calling the next frame.
@@ -1477,8 +1485,14 @@ private void SetNewTarget()
 
 
 
+# TESTING
 
+Stride uses xunit
+Example:
+https://doc.stride3d.net/latest/en/manual/troubleshooting/unit-tests.html
 
+How to name tests:
+https://enterprisecraftsmanship.com/posts/you-naming-tests-wrong/
 
 
 
