@@ -7,22 +7,28 @@ public class RandomGeneratorService : IRandomGeneratorService
 {
 
     private readonly RandomNumberGenerator _randomNumberGenerator;
+    private readonly ICharacterService _characterService;
 
-    public RandomGeneratorService()
+    public RandomGeneratorService(ICharacterService? characterService)
     {
+        if (characterService == null)
+        {
+            _characterService = new CharacterService();
+        }
+        else
+        {
+            _characterService = characterService;
+        }
+        
         _randomNumberGenerator = RandomNumberGenerator.Create();
     }
 
-    
-    public char GenerateRandomCharacter()
-    {
-        const string availableCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-        int randomIndex = GenerateRandomNumberInRange(0, availableCharacters.Length - 1);
-        return availableCharacters[randomIndex];
-    }
-    
+
 
     
+    
+
+
     
     public int GenerateRandomNumber()
     {
@@ -43,8 +49,6 @@ public class RandomGeneratorService : IRandomGeneratorService
         int randomNegativeNumber = (GenerateRandomNumber() | int.MinValue);
         return randomNegativeNumber;
     }
-
-    
 
 
     public int GenerateRandomNumberInRange(int minimumNumber, int maximumNumber)
@@ -69,21 +73,6 @@ public class RandomGeneratorService : IRandomGeneratorService
         return randomNumberInRange;
     }
 
-
-
-    //     Environment.Ticks
-
-    //     DateTime.Now.Ticks
-
-    //     System/Security/Cryptography
-    // /RandomNumberGenerator.cs
-
-
-
-
-
-
-
     public bool GenerateRandomBoolean()
     {
         byte[] randomByte = new byte[1];
@@ -97,32 +86,27 @@ public class RandomGeneratorService : IRandomGeneratorService
     }
 
 
-
-
-
-
-    public string GenerateRandomString(int length)
+    public char GenerateRandomCharacter()
     {
-        char[] randomString = new char[length];
-        for (int i = 0; i < length; i++)
-        {
-            randomString[i] = GenerateRandomCharacter();
-        }
-        return new string(randomString);
+        string availableCharactersString = _characterService.GetAvailableCharactersString();
+        int randomIndex = GenerateRandomNumberInRange(0, availableCharactersString.Length - 1);
+        char randomCharacter = availableCharactersString[randomIndex];
+        return randomCharacter;
     }
 
 
+    public string GenerateRandomString(int lengthOfRandomString)
+    {
+        char[] randomCharacters = new char[lengthOfRandomString];
 
+        for (int i = 0; i < lengthOfRandomString; i++)
+        {
+            randomCharacters[i] = GenerateRandomCharacter();
+        }
 
-
-
-
-
-
-
-
-
-
+        string randomString = new string(randomCharacters);
+        return randomString;
+    }
 
 
 }
