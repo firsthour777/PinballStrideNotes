@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FirstHourLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d3f8b3ec13a313fa628e44c06475821d25f1186")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7c2e947ccfdbedc4a57f49b16c1d83790fa44e97")]
 [assembly: System.Reflection.AssemblyProductAttribute("FirstHourLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FirstHourLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

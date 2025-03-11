@@ -13,19 +13,27 @@ However, certain navigation things might be the case, or certain prefabs, but ag
 
 Assets
     Animations
+        AssetCategory
     Audio
+        AssetCategory
     BlocksPrefabs - this is for the default models provided
     CollisionMeshes
+        AssetCategory
     Materials
+        AssetCategory
     Models
+        AssetCategory
     Prefabs
+        AssetCategory
         Category of Prefabs like Characters, Vehciles, Weapons, etc.
             The Prefab that draws from the other Assets into one thing.
     Scenes
         Scene Name
     StandsPrefabs - this is for the default models provided
     Textures
+        AssetCategory
     UI
+        AssetCategory
 
 Code - 
     Scripts - This is the top level folder for all your scripts, think of folders as Namespaces. 

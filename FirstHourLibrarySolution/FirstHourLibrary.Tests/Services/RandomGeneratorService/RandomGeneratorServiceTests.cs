@@ -3,11 +3,13 @@ using Moq;
 using FirstHourLibrary.Scripts.Services;
 using System.Diagnostics;
 
-namespace FirstHourLibrary.Tests.Services.RandomNumberService;
+namespace FirstHourLibrary.Tests.Services;
+
+
 public class RandomGeneratorServiceTests
 {
 
-    private readonly RandomGeneratorService _randomGeneratorService;
+    private readonly IRandomGeneratorService _randomGeneratorService;
 
     public RandomGeneratorServiceTests()
     {
@@ -52,7 +54,7 @@ public class RandomGeneratorServiceTests
             Assert.True(randomPositiveNumberList[i] >= 0);
         }
 
-        
+
 
     }
 
@@ -83,7 +85,7 @@ public class RandomGeneratorServiceTests
 
     [Theory]
     [InlineData(-50, 50)]
-    [InlineData(0, 100)] 
+    [InlineData(0, 100)]
     [InlineData(-100, -1)]
     public void Random_Number_In_Range_Is_Generated(int minimumNumber, int maximumNumber)
     {
@@ -196,9 +198,9 @@ public class RandomGeneratorServiceTests
             Assert.Equal(randomStringList[i].Length, lengthOfRandomString);
         }
 
-        
+
     }
-    
+
 
 
 }

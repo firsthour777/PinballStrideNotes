@@ -8,7 +8,6 @@
 
 Create Sample Skeleton Scripts
 Create Virtual Buttons Config
-Create Random Num Interface
 Create SceneUnloader manager, that can nullifiy and remove things properly always.
 
 
@@ -350,7 +349,6 @@ Update() is the function that happens every frame
 
 
 
-
 # LOGGING and DEBUGGING
 
 Log.Info("Hi Mom!"); 
@@ -541,7 +539,7 @@ Vector2 absoluteMousePosition = Input.AbsoluteMousePosition;    // Position on g
 
 
 
-# KEYBOARD CAPTURE
+# KEYBOARD INPUT CAPTURE
 
 if(Input.HasKeyboard){
 if(Input.IsKeyDown(Keys.D1)){
@@ -952,11 +950,20 @@ private async Task UpdateAsyncStride()
 
 # ANIMATION
 
+Importing, 
+So first you want to create your Animation in Blender using Keyframing, etc.
+
+Export as FBX, make sure you're only exporting the selection. So select what you want to export before hand.
+
+In order to get the animations, you need to import the animation and also select the skeleton.
+You need a skeleton for the animation to play.
+
 Play animations with Animation Clips
 
 Each Animation clip has a skeleton, model, and normal time frame features.
 
 Add the animation component to your model or whatever you want the animation to play.
+It's a dictionary of animations you want to play.
 
 Animation Components have keys, so you can set a different animation clip to the key.
 
