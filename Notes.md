@@ -958,6 +958,8 @@ Export as FBX, make sure you're only exporting the selection. So select what you
 In order to get the animations, you need to import the animation and also select the skeleton.
 You need a skeleton for the animation to play.
 
+If you're using a placeholder model, you need to replace the model component in order to get the animation to correctly find its model.
+
 Play animations with Animation Clips
 
 Each Animation clip has a skeleton, model, and normal time frame features.
