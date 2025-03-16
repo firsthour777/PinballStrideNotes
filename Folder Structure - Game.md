@@ -52,6 +52,9 @@ Code -
             AssetCategory - Try to come up with Categories you can put your asset in, to help with organization.
                 AssetName
 
+        Extensions
+            SomethingExtensions
+
         Services
             GameService
             GameInstanceService
